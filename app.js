@@ -22,7 +22,7 @@ app.get('/', (req, res) =>{
 
 app.get('/api', (req, res) =>{
 
-    res.status(200).send('<p style="text-align:left; font-size:40px"><b>API Lists</b><br>*<a href="/api/randomNum">Random Number generator</a><br>*<a href="/hello-world">Hello world</a>');
+    res.status(200).send('<p style="text-align:left; font-size:40px"><b>API Lists</b><br>*<a href="/api/randomNum">Random Number generator</a><br>*<a href="/hello-world">Hello world</a><br>*<a href="/api/pi:5">Pi*Var</a>');
 
 
 });
