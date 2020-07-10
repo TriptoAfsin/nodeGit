@@ -13,7 +13,14 @@ const http = require('http')
 
 app.get('/', (req, res) =>{
 
-    res.send("Welcome to demo api");
+    res.status(200).send('<p style="text-align:center; font-size:80px"><b>Welcome to demo api</b><br><a href="/api">API List</a></p>');
+
+
+});
+
+app.get('/api', (req, res) =>{
+
+    res.status(200).send('<p style="text-align:left; font-size:40px"><b>API Lists</b><br>*<a href="/api/randomNum">Random Number generator</a><br>*<a href="/hello-world">Hello world</a>');
 
 
 });
@@ -42,9 +49,11 @@ app.get('/api/randomNum', (req, res)=> {
     })();
 });
 
+//for hosting env
 
+const port = process.env.PORT || 3000;
 
-app.listen(3000, ()=> console.log("Listening on port 3000...."));
+app.listen(port, ()=> console.log("Listening on port "+ port+"......"));
 
 
 
